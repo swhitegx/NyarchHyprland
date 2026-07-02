@@ -286,6 +286,10 @@ wl-clipboard
 # === Display Manager ===
 sddm
 sddm-kcm
+qt5-quickcontrols
+qt5-quickcontrols2
+qt5-graphicaleffects
+qt5-svg
 
 # === Calamares Installer ===
 calamares
