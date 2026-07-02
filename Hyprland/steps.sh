@@ -145,6 +145,11 @@ mkdir -p ./ezreleng/airootfs/etc/skel
 mkdir -p ./ezreleng/airootfs/var/lib/
 ln -sf /usr/share/ezarcher ./ezreleng/airootfs/etc/skel/ezarcher
 cp customize_airootfs.sh ./ezreleng/airootfs/root/customize_airootfs.sh
+# Copy Nyarch-Hyprland dotfiles into the ISO
+if [ -d "./etc/skel/.nyarch-skel" ]; then
+    mkdir -p ./ezreleng/airootfs/usr/share/nyarch
+    cp -r ./etc/skel/.nyarch-skel ./ezreleng/airootfs/usr/share/nyarch/nyarch-hyprland-skel
+fi
 }
 
 # Set hostname

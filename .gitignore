@@ -1,0 +1,6 @@
+# Nyarch Hyprland
+Hyprland/work/
+Hyprland/ezreleng/
+Hyprland/out/
+# Nyarch-Hyprland dotfiles are cloned during build; gitignored from repo
+Hyprland/etc/skel/.nyarch-skel/

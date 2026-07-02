@@ -1,7 +1,8 @@
-name: Build Nyarch Hyprland ISO on commit
+name: Build Nyarch Hyprland ISO
 
 on:
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,13 +11,32 @@ jobs:
       options: --privileged
     steps:
       - uses: actions/checkout@v4
-      - run: pwd
-      - run: find .
-      - run: cat /etc/os-release
-      - run: pacman-key --init
-      - run: pacman --noconfirm -Sy archlinux-keyring grub
-      - run: bash Hyprland/install_chaotic.sh
-      - run: cd Hyprland && bash steps.sh
+
+      - name: Check environment
+        run: |
+          pwd
+          cat /etc/os-release
+          find . -maxdepth 3 | head -40
+
+      - name: Prepare build environment
+        run: |
+          pacman-key --init
+          pacman --noconfirm -Sy archlinux-keyring grub
+
+      - name: Add Chaotic-AUR
+        run: bash Hyprland/install_chaotic.sh
+
+      - name: Verify dotfiles are present
+        run: |
+          if [ -d "Hyprland/etc/skel/.nyarch-skel" ]; then
+            echo "Dotfiles found: $(find Hyprland/etc/skel/.nyarch-skel -type f | wc -l) files"
+          else
+            echo "WARNING: Dotfiles not found. The ISO will ship with minimal skel."
+          fi
+
+      - name: Build ISO
+        run: cd Hyprland && bash steps.sh
+
       - uses: actions/upload-artifact@v4
         with:
           name: Nyarch Hyprland Live ISO

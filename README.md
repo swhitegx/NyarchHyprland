@@ -42,14 +42,14 @@ We welcome contributions! Please join our [Discord server](https://discord.gg/xu
 
 ### Dotfiles
 
-The Hyprland spin is inspired by [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland). The dotfiles under `Hyprland/etc/skel/.config/` are the starting point — feel free to customize and contribute better configurations!
+The dotfiles under `Hyprland/etc/skel/.config/` are the starting point — feel free to customize and contribute better configurations!
 
 ### Planned features
 - [x] ISO build infrastructure
 - [x] Hyprland, Waybar, Wofi, Dunst config stubs
 - [x] SDDM display manager
 - [x] Calamares installer integration
-- [ ] Complete dotfiles (end-4 fork integration)
+- [ ] Complete dotfiles (Hyprland, Waybar, Wofi, Dunst, Kitty)
 - [ ] Custom Plymouth theme
 - [ ] Wallpaper pack
 - [ ] Nyarch apps integration (Nyarch Tour, Assistant, etc.)
