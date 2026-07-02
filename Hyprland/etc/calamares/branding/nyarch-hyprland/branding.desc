@@ -1,0 +1,48 @@
+# Ezarcher custom settings
+# SPDX-FileCopyrightText: no
+# SPDX-License-Identifier: CC0-1.0
+#
+# Product branding information. This influences some global
+# user-visible aspects of Calamares, such as the product
+# name, window behavior, and the slideshow during installation.
+---
+componentName:  ezarcher
+
+welcomeStyleCalamares:   false
+welcomeExpandingLogo:   true
+
+windowExpanding:    normal
+windowSize: 800px,520px
+windowPlacement: center
+
+sidebar: widget
+navigation: widget
+
+strings:
+    productName:         "Nyarch Linux (Hyprland)"
+    shortProductName:    nyarch-hyprland
+    version:             25.06
+    shortVersion:        25.06
+    versionedName:       Nyarch Linux Hyprland
+    shortVersionedName:  Nyarch Linux Hyprland
+    bootloaderEntryName: nyarch-hyprland
+    productUrl:          https://nyarchlinux.moe
+
+images:
+    productIcon:         "squid.png"
+    productLogo:         "logo.png"
+    productWelcome:      "welcome.png"
+
+style:
+   SidebarBackground:    "#1c1e26"
+   SidebarText:          "#c0c0d0"
+   SidebarTextCurrent:   "#90beff"
+   SidebarBackgroundCurrent: "#2d4a7a"
+
+slideshow:               "show.qml"
+slideshowAPI: 2
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1

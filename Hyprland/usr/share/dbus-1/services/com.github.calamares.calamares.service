@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[D-BUS Service]
+Name=com.github.calamares.calamares
+Exec=/usr/bin/calamares -d

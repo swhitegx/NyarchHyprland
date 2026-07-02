@@ -1,0 +1,11 @@
+NAME="Nyarch Linux Hyprland"
+PRETTY_NAME="Nyarch Linux Hyprland"
+ID=nyarch
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="0;36"
+HOME_URL="https://nyarchlinux.moe"
+DOCUMENTATION_URL="https://wiki.nyarchlinux.moe"
+SUPPORT_URL="https://discord.gg/xuw6BNXXE7"
+BUG_REPORT_URL="https://github.com/NyarchLinux/NyarchLinux/issues"
+LOGO=nyarch

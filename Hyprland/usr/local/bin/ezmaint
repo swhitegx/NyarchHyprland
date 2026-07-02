@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Nyarch Hyprland — ezmaint maintenance script
+# Placeholder, will be expanded in future PRs
+
+echo "Nyarch Hyprland — ezmaint: Maintenance mode"
+echo "Run system maintenance tasks here."

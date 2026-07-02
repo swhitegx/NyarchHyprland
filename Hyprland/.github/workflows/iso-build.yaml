@@ -1,0 +1,23 @@
+name: Build Nyarch Hyprland ISO on commit
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux/archlinux:latest
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - run: pwd
+      - run: find .
+      - run: cat /etc/os-release
+      - run: pacman-key --init
+      - run: pacman --noconfirm -Sy archlinux-keyring grub
+      - run: bash Hyprland/install_chaotic.sh
+      - run: cd Hyprland && bash steps.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Nyarch Hyprland Live ISO
+          path: /__w/NyarchHyprland/NyarchHyprland/Hyprland/out/*.iso

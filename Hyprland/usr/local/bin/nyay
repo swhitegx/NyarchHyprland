@@ -1,0 +1,12 @@
+#!/bin/bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Nyay — Yay wrapper (placeholder)
+
+if command -v yay &> /dev/null; then
+    yay "$@"
+elif command -v paru &> /dev/null; then
+    paru "$@"
+else
+    echo "No AUR helper found"
+    exit 1
+fi

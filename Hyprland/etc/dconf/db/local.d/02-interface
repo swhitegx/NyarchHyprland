@@ -1,0 +1,4 @@
+[org/gnome/desktop/interface]
+show-battery-percentage=true
+clock-show-seconds=false
+clock-show-weekday=true

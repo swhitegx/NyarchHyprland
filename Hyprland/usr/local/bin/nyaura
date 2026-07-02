@@ -1,0 +1,13 @@
+#!/bin/bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Nyaura — Aura wrapper (placeholder)
+
+# Aura is a AUR helper similar to yaourt
+if command -v aura &> /dev/null; then
+    aura "$@"
+elif command -v yay &> /dev/null; then
+    yay "$@"
+else
+    echo "No AUR helper found (aura or yay)"
+    exit 1
+fi

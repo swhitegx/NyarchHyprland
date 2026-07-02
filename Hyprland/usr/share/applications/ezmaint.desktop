@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[Desktop Entry]
+Type=Application
+Name=Nyarcher
+Comment=Configure Nyarch Hyprland
+Exec=/usr/local/bin/ezmaint
+Terminal=false
+Categories=System;
+Icon=nyarch

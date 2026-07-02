@@ -1,0 +1,12 @@
+# remove from airootfs!
+# uncomment mirrors hook
+[Trigger]
+Operation = Install
+Type = Package
+Target = pacman-mirrorlist
+
+[Action]
+Description = Uncomment mirrors for fastest mirror...
+When = PostTransaction
+Depends = pacman-mirrorlist
+Exec = /bin/sh -c "sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist"
