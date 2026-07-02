@@ -265,6 +265,7 @@ libva-utils
 # === Status bar / widgets (Ignis system) ===
 # Ignis is installed from AUR, built on Python + GTK
 # See: https://github.com/linkfrg/dotfiles
+ignis-git
 polkit-gnome
 python-jinja
 python-materialyoucolor
