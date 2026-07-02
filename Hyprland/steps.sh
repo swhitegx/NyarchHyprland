@@ -91,7 +91,7 @@ rm -r /opt/ezrepo
 
 # Remove auto-login, cloud-init, hyper-v, iwd, sshd, & vmware services
 rmunitsd () {
-rm -r ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants
+[[ -d ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants ]] && rm -r ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants
 # rm -r ./ezreleng/airootfs/etc/systemd/system/getty@tty1.service.d
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_fcopy_daemon.service
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_kvp_daemon.service
