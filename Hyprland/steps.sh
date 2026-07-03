@@ -112,7 +112,7 @@ rm -rf ./ezreleng/airootfs/usr/share/applications/stoken-gui-small.desktop
 rm -rf ./ezreleng/airootfs/usr/share/applications/qv4l2.desktop
 }
 
-# Add cups, haveged, NetworkManager, & sddm systemd links
+# Add cups, haveged, NetworkManager systemd links
 addnmlinks () {
 mkdir -p ./ezreleng/airootfs/etc/systemd/system/network-online.target.wants
 mkdir -p ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants
@@ -127,7 +127,6 @@ ln -sf /usr/lib/systemd/system/haveged.service ./ezreleng/airootfs/etc/systemd/s
 ln -sf /usr/lib/systemd/system/cups.service ./ezreleng/airootfs/etc/systemd/system/printer.target.wants/cups.service
 ln -sf /usr/lib/systemd/system/cups.socket ./ezreleng/airootfs/etc/systemd/system/sockets.target.wants/cups.socket
 ln -sf /usr/lib/systemd/system/cups.path ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/cups.path
-ln -sf /usr/lib/systemd/system/sddm.service ./ezreleng/airootfs/etc/systemd/system/display-manager.service
 }
 
 # Copy files to customize the ISO

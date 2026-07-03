@@ -8,7 +8,6 @@
 # Enable services
 systemctl enable bluetooth
 systemctl enable grub-btrfsd
-systemctl enable sddm
 systemctl enable haveged
 systemctl enable cups
 systemctl enable NetworkManager
@@ -27,8 +26,5 @@ if [ -d "$DOTFILES_DIR" ]; then
 else
     echo "WARNING: Nyarch-Hyprland dotfiles not found. Minimal skel will be used."
 fi
-
-# Set default shell to fish
-chsh -s /usr/bin/fish 2>/dev/null || true
 
 echo "Nyarch Hyprland customization complete."
