@@ -159,60 +159,60 @@ echo "${MYHOSTNM}" > ./ezreleng/airootfs/etc/hostname
 # Create passwd file
 crtpasswd () {
 echo "root:x:0:0:root:/root:/usr/bin/bash
-\"${MYUSERNM}\":x:1010:1010::/home/\"${MYUSERNM}\":/usr/bin/bash" > ./ezreleng/airootfs/etc/passwd
+${MYUSERNM}:x:1010:1010::/home/${MYUSERNM}:/usr/bin/bash" > ./ezreleng/airootfs/etc/passwd
 }
 
 # Create group file
 crtgroup () {
 echo "root:x:0:root
-sys:x:3:\"${MYUSERNM}\"
-adm:x:4:\"${MYUSERNM}\"
-wheel:x:10:\"${MYUSERNM}\"
-log:x:18:\"${MYUSERNM}\"
-network:x:90:\"${MYUSERNM}\"
-floppy:x:94:\"${MYUSERNM}\"
-scanner:x:96:\"${MYUSERNM}\"
-power:x:98:\"${MYUSERNM}\"
-uucp:x:810:\"${MYUSERNM}\"
-audio:x:820:\"${MYUSERNM}\"
-lp:x:830:\"${MYUSERNM}\"
-rfkill:x:840:\"${MYUSERNM}\"
-video:x:850:\"${MYUSERNM}\"
-storage:x:860:\"${MYUSERNM}\"
-optical:x:870:\"${MYUSERNM}\"
-sambashare:x:880:\"${MYUSERNM}\"
-users:x:985:\"${MYUSERNM}\"
-\"${MYUSERNM}\":x:1010:" > ./ezreleng/airootfs/etc/group
+sys:x:3:${MYUSERNM}
+adm:x:4:${MYUSERNM}
+wheel:x:10:${MYUSERNM}
+log:x:18:${MYUSERNM}
+network:x:90:${MYUSERNM}
+floppy:x:94:${MYUSERNM}
+scanner:x:96:${MYUSERNM}
+power:x:98:${MYUSERNM}
+uucp:x:810:${MYUSERNM}
+audio:x:820:${MYUSERNM}
+lp:x:830:${MYUSERNM}
+rfkill:x:840:${MYUSERNM}
+video:x:850:${MYUSERNM}
+storage:x:860:${MYUSERNM}
+optical:x:870:${MYUSERNM}
+sambashare:x:880:${MYUSERNM}
+users:x:985:${MYUSERNM}
+${MYUSERNM}:x:1010:" > ./ezreleng/airootfs/etc/group
 }
 
 # Create shadow file
 crtshadow () {
 usr_hash=$(openssl passwd -6 "${MYUSRPASSWD}")
 root_hash=$(openssl passwd -6 "${RTPASSWD}")
-echo "root:\"${root_hash}\":14871::::::
-\"${MYUSERNM}\":\"${usr_hash}\":14871::::::" > ./ezreleng/airootfs/etc/shadow
+echo "root:${root_hash}:14871::::::
+${MYUSERNM}:${usr_hash}:14871::::::" > ./ezreleng/airootfs/etc/shadow
 }
 
 # create gshadow file
 crtgshadow () {
 echo "root:!*::root
-sys:!*::\"${MYUSERNM}\"
-adm:!*::\"${MYUSERNM}\"
-wheel:!*::\"${MYUSERNM}\"
-log:!*::\"${MYUSERNM}\"
-network:!*::\"${MYUSERNM}\"
-floppy:!*::\"${MYUSERNM}\"
-scanner:!*::\"${MYUSERNM}\"
-power:!*::\"${MYUSERNM}\"
-uucp:!*::\"${MYUSERNM}\"
-audio:!*::\"${MYUSERNM}\"
-lp:!*::\"${MYUSERNM}\"
-rfkill:!*::\"${MYUSERNM}\"
-video:!*::\"${MYUSERNM}\"
-storage:!*::\"${MYUSERNM}\"
-optical:!*::\"${MYUSERNM}\"
-sambashare:!*::\"${MYUSERNM}\"
-\"${MYUSERNM}\":!*::" > ./ezreleng/airootfs/etc/gshadow
+sys:!*::${MYUSERNM}
+adm:!*::${MYUSERNM}
+wheel:!*::${MYUSERNM}
+log:!*::${MYUSERNM}
+network:!*::${MYUSERNM}
+floppy:!*::${MYUSERNM}
+scanner:!*::${MYUSERNM}
+power:!*::${MYUSERNM}
+uucp:!*::${MYUSERNM}
+audio:!*::${MYUSERNM}
+lp:!*::${MYUSERNM}
+rfkill:!*::${MYUSERNM}
+video:!*::${MYUSERNM}
+storage:!*::${MYUSERNM}
+optical:!*::${MYUSERNM}
+sambashare:!*::${MYUSERNM}
+${MYUSERNM}:!*::" > ./ezreleng/airootfs/etc/gshadow
 }
 
 # Set the keyboard layout
