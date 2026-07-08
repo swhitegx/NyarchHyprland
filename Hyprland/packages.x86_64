@@ -253,6 +253,7 @@ hypridle
 hyprpaper
 hyprpicker
 hyprpolkitagent
+waybar
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 qt5-wayland
@@ -280,6 +281,8 @@ swappy
 grim
 slurp
 wl-clipboard
+wofi
+dunst
 # grimblast-git is in AUR (provides grim + slurp with screenshot region)
 # Not packaging here as grim+slurp cover the same functionality
 
