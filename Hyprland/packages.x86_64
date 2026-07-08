@@ -253,7 +253,6 @@ hypridle
 hyprpaper
 hyprpicker
 hyprpolkitagent
-waybar
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 qt5-wayland
@@ -264,8 +263,6 @@ libva
 libva-utils
 
 # === Status bar / widgets (Ignis system) ===
-# Ignis is installed from AUR, built on Python + GTK
-# See: https://github.com/linkfrg/dotfiles
 ignis-git
 polkit-gnome
 python-jinja
@@ -281,8 +278,7 @@ swappy
 grim
 slurp
 wl-clipboard
-wofi
-dunst
+grimblast-git
 # grimblast-git is in AUR (provides grim + slurp with screenshot region)
 # Not packaging here as grim+slurp cover the same functionality
 
