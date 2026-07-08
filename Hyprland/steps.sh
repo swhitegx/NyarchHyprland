@@ -22,10 +22,10 @@ KEYMOD="pc105"
 MYUSERNM="live"
 # use all lowercase letters only
 
-MYUSRPASSWD="***"
+MYUSRPASSWD="live"
 # Pick a password of your choice
 
-RTPASSWD="***"
+RTPASSWD="toor"
 # Pick a root password
 
 MYHOSTNM="nyarchlinux"
