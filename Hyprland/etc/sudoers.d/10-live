@@ -1,0 +1,2 @@
+# Allow live user to run commands without password (live ISO)
+live ALL=(ALL) NOPASSWD: ALL

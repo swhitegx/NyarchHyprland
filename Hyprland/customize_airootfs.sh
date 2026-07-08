@@ -4,6 +4,8 @@
 # customize_airootfs.sh — Nyarch Hyprland airootfs customization
 # Runs inside the ISO build environment after packages are installed.
 #
+# Note: Hyprland config files are already placed directly at
+# /etc/skel/.config/hypr/ by steps.sh (cp -r etc/).
 
 # Enable services
 systemctl enable bluetooth
@@ -12,31 +14,21 @@ systemctl enable haveged
 systemctl enable cups
 systemctl enable NetworkManager
 
-# Copy Nyarch-Hyprland dotfiles to skel
+# Copy Nyarch-Hyprland extras to skel (Ignis bar, Material theme)
 SKEL_DIR="/etc/skel"
 DOTFILES_DIR="/usr/share/nyarch/nyarch-hyprland-skel"
 
 if [ -d "$DOTFILES_DIR" ]; then
-    echo "Installing Nyarch-Hyprland dotfiles..."
+    echo "Installing Nyarch-Hyprland extras..."
 
-    # Ensure target directories exist before copying
-    mkdir -p "$SKEL_DIR/.config"
-
-    # Copy all config files
-    cp -rv "$DOTFILES_DIR/.config"/* "$SKEL_DIR/.config/" 2>/dev/null || true
+    # Copy Ignis bar/widget system
     cp -rv "$DOTFILES_DIR/ignis" "$SKEL_DIR/.config/ignis" 2>/dev/null || true
 
     # Install Material GTK theme
     mkdir -p /usr/share/themes
     cp -rv "$DOTFILES_DIR/Material" /usr/share/themes/ 2>/dev/null || true
 
-    # Verify config was installed
-    if [ -f "$SKEL_DIR/.config/hypr/hyprland.conf" ]; then
-        echo "Verification: hyprland.conf installed successfully"
-    else
-        echo "WARNING: hyprland.conf was NOT installed! Check DOTFILES_DIR contents."
-        ls -la "$DOTFILES_DIR/.config/hypr/" 2>/dev/null || true
-    fi
+    echo "Extras installed."
 else
     echo "WARNING: Nyarch-Hyprland dotfiles not found at $DOTFILES_DIR"
 fi
