@@ -3,7 +3,10 @@
 # to avoid launching multiple instances
 
 if [ "$(tty)" = "/dev/tty1" ] && [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
-    # Small delay to let system services fully initialize
     sleep 1
-    exec Hyprland
+    if command -v start-hyprland &>/dev/null; then
+        exec start-hyprland
+    else
+        exec Hyprland
+    fi
 fi

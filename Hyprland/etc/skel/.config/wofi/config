@@ -1,0 +1,9 @@
+width=40%
+lines=8
+hide_scroll=true
+term=kitty
+show=drun
+insensitive=true
+allow_markup=true
+drun-display-format={name}
+drun-match-fields=name,generic,exec,categories,keywords

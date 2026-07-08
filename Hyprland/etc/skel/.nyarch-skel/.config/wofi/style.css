@@ -1,0 +1,49 @@
+/* Nyarch Hyprland — wofi Material style */
+window {
+    background-color: rgba(26, 27, 31, 0.96);
+    border: 1px solid rgba(144, 190, 255, 0.3);
+    border-radius: 8px;
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 13px;
+}
+
+#input {
+    background-color: #262830;
+    color: #e0e0e8;
+    border: none;
+    border-radius: 6px;
+    margin: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+#input:focus {
+    border: 1px solid #90beff;
+}
+
+#outer-box {
+    margin: 4px;
+}
+
+#scroll {
+    margin: 4px 0;
+}
+
+#entry {
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #c0c0d0;
+}
+
+#entry:selected {
+    background-color: rgba(144, 190, 255, 0.15);
+    color: #90beff;
+}
+
+#text {
+    margin-left: 8px;
+}
+
+#img {
+    margin-right: 6px;
+}
