@@ -253,6 +253,7 @@ hypridle
 hyprpaper
 hyprpicker
 hyprpolkitagent
+waybar
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 qt5-wayland
@@ -262,8 +263,9 @@ qt6ct
 libva
 libva-utils
 
-# === Status bar / widgets (Ignis system) ===
-ignis-git
+# === Status bar / widgets ===
+# ignis-git (AUR) and python-ignis-git not in Chaotic-AUR
+# Using waybar+wofi+dunst as pre-installed alternatives
 polkit-gnome
 python-jinja
 python-materialyoucolor
@@ -278,9 +280,9 @@ swappy
 grim
 slurp
 wl-clipboard
-grimblast-git
-# grimblast-git is in AUR (provides grim + slurp with screenshot region)
-# Not packaging here as grim+slurp cover the same functionality
+wofi
+dunst
+# grimblast-git is AUR-only (not in Chaotic-AUR); grim+slurp cover most needs
 
 # === Display Manager ===
 sddm
